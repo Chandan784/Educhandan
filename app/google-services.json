@@ -1,0 +1,48 @@
+{
+  "project_info": {
+    "project_number": "120975986808",
+    "firebase_url": "https://educhandan-bb0b4-default-rtdb.firebaseio.com",
+    "project_id": "educhandan-bb0b4",
+    "storage_bucket": "educhandan-bb0b4.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:120975986808:android:038ced5700f77731bc5d8d",
+        "android_client_info": {
+          "package_name": "com.educhandan.educhandan"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "120975986808-u8ddoju8b693mphvkahijkcfds3031tj.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.educhandan.educhandan",
+            "certificate_hash": "2cfdff2c3eb94cc89ef1325cc54794590bc12abe"
+          }
+        },
+        {
+          "client_id": "120975986808-j7p8eik1jq2q1t47c8j2u96rohrtuap9.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBHKilgZPTgvLuAHDzcmn81zDNrch98mCo"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "120975986808-j7p8eik1jq2q1t47c8j2u96rohrtuap9.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

@@ -1,0 +1,134 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.educhandan.educhandan">
+
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <uses-permission android:name="android.permission.CHANGE_NETWORK_STATE" />
+    <uses-permission android:name="android.permission.FOREGROUND_SERVICE" />
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.ACCESS_NOTIFICATION_POLICY" />
+
+    <queries>
+        <intent>
+            <action android:name="com.google.android.youtube.api.service.START" />
+        </intent>
+    </queries>
+
+    <application
+        android:allowBackup="true"
+        android:icon="@drawable/logo"
+        android:label="@string/app_name"
+        android:roundIcon="@drawable/logo"
+        android:supportsRtl="true"
+        android:theme="@style/AppTheme"
+        android:usesCleartextTraffic="true">
+        <activity
+            android:name="com.educhandan.educhandan.TestSetsActivity"
+            android:launchMode="singleTop"
+            android:screenOrientation="portrait"
+            android:theme="@style/WithActionBarTheme" />
+        <activity
+            android:name="com.educhandan.educhandan.TestInstructionActivity"
+            android:launchMode="singleTop"
+            android:screenOrientation="portrait"
+            android:theme="@style/WithActionBarTheme" />
+        <activity
+            android:name="com.educhandan.educhandan.QuestionDisplayActivity"
+            android:launchMode="singleTop"
+            android:parentActivityName="com.educhandan.educhandan.MainActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/NoActionBarTheme" />
+        <activity
+            android:name="com.educhandan.educhandan.TestAnalysisActivity"
+            android:launchMode="singleTop"
+            android:parentActivityName="com.educhandan.educhandan.MainActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/WithActionBarTheme" />
+
+        <service android:name="com.educhandan.educhandan.classes.FirebaseDeviceTokenService">
+            <intent-filter>
+                <action android:name="com.google.firebase.INSTANCE_ID_EVENT" />
+            </intent-filter>
+        </service>
+        <service android:name="com.educhandan.educhandan.classes.FirebaseCloudMessagingService">
+            <intent-filter>
+                <action android:name="com.google.firebase.MESSAGING_EVENT" />
+            </intent-filter>
+        </service>
+
+        <activity
+            android:name="com.educhandan.educhandan.UpdateUserInfoActivity"
+            android:launchMode="singleTop"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.educhandan.educhandan.LecturePlayActivity"
+            android:launchMode="singleTop"
+            android:screenOrientation="landscape"
+            android:theme="@android:style/Theme.Holo.NoActionBar.Fullscreen" />
+        <activity
+            android:name="com.educhandan.educhandan.CourseMaterialActivity"
+            android:launchMode="singleTop"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.educhandan.educhandan.CourseSubjectsActivity"
+            android:launchMode="singleTop"
+            android:screenOrientation="portrait" /> <!-- configChanges is used to prevent reloading on orientation change -->
+        <activity
+            android:name="com.educhandan.educhandan.NotesDisplayActivity"
+            android:configChanges="keyboard|keyboardHidden|orientation|screenLayout|uiMode|screenSize|smallestScreenSize"
+            android:launchMode="singleTop" />
+        <activity
+            android:name="com.educhandan.educhandan.ViewAllActivity"
+            android:launchMode="singleTop"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.educhandan.educhandan.DeliveryActivity"
+            android:launchMode="singleTop"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.educhandan.educhandan.OrderDetailsActivity"
+            android:launchMode="singleTop"
+            android:theme="@style/NoActionBarTheme" />
+        <activity
+            android:name="com.educhandan.educhandan.ProductDetailsActivity"
+            android:launchMode="singleTop"
+            android:screenOrientation="portrait"
+            android:theme="@style/NoActionBarTheme" />
+        <activity
+            android:name="com.educhandan.educhandan.CategoryActivity"
+            android:launchMode="singleTop"
+            android:theme="@style/NoActionBarTheme" />
+        <activity
+            android:name="com.educhandan.educhandan.MainActivity"
+            android:launchMode="singleTop"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.educhandan.educhandan.RegisterActivity"
+            android:launchMode="singleTop"
+            android:screenOrientation="portrait"
+            android:theme="@style/SplashTheme" />
+        <activity
+            android:name="com.educhandan.educhandan.SplashActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/SplashTheme">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+
+            <meta-data
+                android:name="com.google.android.gms.ads.APPLICATION_ID"
+                android:value="@string/admob_app_id"/>
+
+        <meta-data
+            android:name="com.razorpay.ApiKey"
+            android:value="rzp_live_3b1a39RNUKD9hU" />
+        <meta-data
+            android:name="com.google.firebase.messaging.default_notification_icon"
+            android:resource="@drawable/logo" />
+    </application>
+
+</manifest>
